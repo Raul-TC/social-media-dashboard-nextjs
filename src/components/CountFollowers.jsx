@@ -29,7 +29,7 @@ const CountFollowers = ({ followers, card }) => {
         setCounter(valor)
     }
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (!(counter >= followers)) startAnim()
         return (() => {
             clearInterval(animInterval)

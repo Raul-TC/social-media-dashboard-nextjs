@@ -20,12 +20,10 @@ export default function Home({ cards, details }) {
       <main className={`${inter.className} m-auto`}>
         <Header />
         <Layout>
-          {/* <div className='flex flex-col md:flex-row md:justify-between -mt-10 md:-mt-[120px] flex-wrap items-center gap-4'> */}
           <div className='grid  grid-cols-1 xl:grid-cols-4 place-content-between gap-8 sm:grid-cols-2  -mt-10 md:-mt-[120px] ml-auto mr-auto text-center'>
             {cards.map((card, index) => <Card key={card.mediaName + index} icon={card.icon} mediaName={card.mediaName} isUp={card.isUp} userName={card.username} type={card.type} followers={card.followers} recentNotify={card.recentNotify} arrow={card.arrow} />)}
           </div>
           <h2 className='dark:text-text-light text-titles-dark font-bold text-2xl my-6 md:mt-10'>Overview -  Today</h2>
-          {/* <div className='flex flex-col md:flex-row md:justify-between items-center flex-wrap gap-4'> */}
           <div className='grid grid-cols-1  sm:grid-cols-2 xl:grid-cols-4 md:flex-row md:justify-between items-center flex-wrap gap-8 mb-12'>
             {details.map((detail, index) => <DetailsCard key={detail.mediaName + index} mediaName={detail.mediaName} icon={detail.icon} arrow={detail.arrow} isUp={detail.isUp} sectionName={detail.sectionName} state={detail.state} percentage={detail.percentage} />)}
           </div>
