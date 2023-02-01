@@ -31,9 +31,9 @@ const ToogleTheme = () => {
             </Head>
             <div className='flex justify-between md:justify-start items-center md:gap-3'>
                 <h2 className='font-bold'>Dark Mode</h2>
-                <span className={`w-16 h-8 rounded-full ${darkTheme ? 'bg-toggle-light hover:bg-gradient-to-r  from-toogle-gradient-left to-toogle-gradient-right ' : ' bg-gradient-to-r from-toogle-gradient-left to-toogle-gradient-right'}  transition-all ease-in-out duration-500 flex flex-col justify-center`}>
+                <div className={`w-16 h-8 rounded-full ${darkTheme ? 'bg-toggle-light hover:bg-gradient-to-r  from-toogle-gradient-left to-toogle-gradient-right ' : ' bg-gradient-to-r from-toogle-gradient-left to-toogle-gradient-right'}  transition-all ease-in-out duration-500 flex flex-col justify-center`}>
                     <span onClick={handleTheme} className={`w-6 h-6 cursor-pointer rounded-full dark:bg-white bg-toggle-dark transition-all ease-in-out duration-500  ${darkTheme ? 'ml-9' : 'ml-1'}`}></span>
-                </span>
+                </div>
             </div>
         </>
     )
